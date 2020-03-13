@@ -1,6 +1,7 @@
 import React from 'react'
 import Purse from "./Purse"
-import InventoryTile from "./InventoryTile"
+// import InventoryTile from "./InventoryTile"
+import PotionTile from "./PotionTile"
 
 
 const Inventory = (props) => {
@@ -11,9 +12,9 @@ const Inventory = (props) => {
       const potion = props.potions.find(potion => potion.id === item.id)
 
        return (
-        <InventoryTile potion={potion} sell={props.sell}>
+        <PotionTile potion={potion} sell={props.sell} method={props.sell} className={"inventory-card"}>
           <h4>{potion.name} x {item.amount}</h4>
-        </InventoryTile>
+        </PotionTile>
       )
     })  
   }
